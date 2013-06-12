@@ -48,7 +48,23 @@ PRODUCT_COPY_FILES += \
 # HW
 PRODUCT_COPY_FILES += \
 	vendor/htc/primou/proprietary/lib/hw/hwcomposer.msm7x30.so:system/lib/hw/hwcomposer.msm7x30.so \
-	vendor/htc/primou/proprietary/lib/hw/camera.default.so:system/lib/hw/camera.default.so 
+        vendor/htc/primou/proprietary/lib/hw/camera.default.so:system/lib/hw/camera.default.so 
+
+
+#CRAP2
+PRODUCT_COPY_FILES += \
+        vendor/htc/primou/proprietary/lib/hw/copybit.msm7x30.so:system/lib/hw/copybit.msm7x30.so \
+        vendor/htc/primou/proprietary/lib/hw/gralloc.msm7x30.so:system/lib/hw/gralloc.msm7x30.so \
+        vendor/htc/primou/proprietary/lib/hw/power.msm7x30.so:system/lib/hw/power.msm7x30.so \
+        vendor/htc/primou/proprietary/lib/hw/audio.primary.msm7x30.so:system/lib/hw/audio.primary.msm7x30.so \
+        vendor/htc/primou/proprietary/lib/hw/audio_policy.default.so:system/lib/hw/audio_policy.default.so \
+        vendor/htc/primou/proprietary/lib/hw/lights.primou.so:system/lib/hw/lights.primou.so \
+        vendor/htc/primou/proprietary/lib/hw/sensors.primou.so:system/lib/hw/sensors.primou.so \
+        vendor/htc/primou/proprietary/lib/hw/gps.primou.so:system/lib/hw/gps.primou.so 
+
+#GPS location
+PRODUCT_COPY_FILES += \
+        vendor/htc/primou/proprietary/lib/librpc.so:system/lib/librpc.so
 	
 # EGL
 PRODUCT_COPY_FILES += \
@@ -56,6 +72,7 @@ PRODUCT_COPY_FILES += \
     vendor/htc/primou/proprietary/lib/egl/libEGL_adreno200.so:/system/lib/egl/libEGL_adreno200.so \
     vendor/htc/primou/proprietary/lib/egl/libGLESv1_CM_adreno200.so:/system/lib/egl/libGLESv1_CM_adreno200.so \
     vendor/htc/primou/proprietary/lib/egl/libGLESv2_adreno200.so:/system/lib/egl/libGLESv2_adreno200.so \
+    vendor/htc/primou/proprietary/lib/egl/libGLESv2S3D_adreno200.so:/system/lib/egl/libGLESv2S3D_adreno200.so \
     vendor/htc/primou/proprietary/lib/egl/libq3dtools_adreno200.so:/system/lib/egl/libq3dtools_adreno200.so \
     vendor/htc/primou/proprietary/lib/libOpenVG.so:/system/lib/libOpenVG.so \
     vendor/htc/primou/proprietary/lib/libC2D2.so:/system/lib/libC2D2.so \
@@ -63,10 +80,13 @@ PRODUCT_COPY_FILES += \
     vendor/htc/primou/proprietary/lib/libsc-a2xx.so:/system/lib/libsc-a2xx.so
 
 # Camera
-#PRODUCT_COPY_FILES += \
+PRODUCT_COPY_FILES += \
+    vendor/htc/primou/proprietary/lib/hw/camera.default.so:system/lib/hw/camera.default.so \
+    vendor/htc/primou/proprietary/lib/libcamera_client.so:system/lib/libcamera_client.so \
+    vendor/htc/primou/proprietary/lib/libcameraservice.so:system/lib/libcameraservice.so \
+    vendor/htc/primou/proprietary/lib/libsurfaceflinger_client.so:system/lib/libsurfaceflinger_client.so \
     vendor/htc/primou/proprietary/bin/awb_camera:/system/bin/awb_camera \
     vendor/htc/primou/proprietary/bin/lsc_camera:/system/bin/lsc_camera \
-    vendor/htc/primou/proprietary/lib/libcamera_client.so:system/lib/libcamera_client.so \
     vendor/htc/primou/proprietary/lib/libcameraface.so:system/lib/libcameraface.so \
     vendor/htc/primou/proprietary/lib/libcamerapp.so:system/lib/libcamerapp.so \
     vendor/htc/primou/proprietary/lib/libcameraservice.so:system/lib/libcameraservice.so \
